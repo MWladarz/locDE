@@ -9,7 +9,7 @@
   <pre id="inhalt">Lade Datei...</pre>
 
   <script>
-    fetch("_GitHub_developer_worksheets/WorksheetFunctionWIKI.txt")
+    fetch("https://raw.githubusercontent.com/MWladarz/_GitHub_developer_worksheets/WorksheetFunctionWIKI.txt")
       .then(response => response.text())
       .then(text => document.getElementById("inhalt").textContent = text)
       .catch(error => {
