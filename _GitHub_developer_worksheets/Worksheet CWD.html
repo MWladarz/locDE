@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Text von GitHub laden</title>
+</head>
+<body>
+  <h2>Datei-Inhalt von GitHub</h2>
+  <pre id="inhalt">Lade Datei...</pre>
+
+  <script>
+    fetch("_GitHub_developer_worksheets/WorksheetFunctionWIKI.txt")
+      .then(response => response.text())
+      .then(text => document.getElementById("inhalt").textContent = text)
+      .catch(error => {
+        document.getElementById("inhalt").textContent = "Fehler beim Laden der Datei.";
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
